@@ -1,7 +1,7 @@
 const params=new URLSearchParams(location.search),concept=['dark','editorial','atelier'].includes(params.get('concept'))?params.get('concept'):'dark';
-const img=(name,alt)=>`<img src="assets/photos/${name}.webp" alt="${alt}" data-source="client" data-subject="${alt}">`;
+const img=(name,alt)=>`<img src="${name}.webp" alt="${alt}" data-source="client" data-subject="${alt}">`;
 const arr='<svg viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></svg>';
-const header=(text)=>`<header class="catalog-header"><img class="catalog-logo" src="assets/logo.webp" alt="Оригинальный логотип CVETOCHEK"><span>${text}</span></header>`;
+const header=(text)=>`<header class="catalog-header"><img class="catalog-logo" src="logo.webp" alt="Оригинальный логотип CVETOCHEK"><span>${text}</span></header>`;
 const foot=(page)=>`<footer class="catalog-footer"><span>CVETOCHEK · Флористика и декор</span><span>${String(page).padStart(2,'0')} / 03</span></footer>`;
 const cta=(text)=>`<a class="catalog-cta" href="https://t.me/ledidi393" target="_blank" rel="noopener">${text}${arr}</a>`;
 const pages={dark:[
